@@ -50,7 +50,7 @@ and RGB channels.
 
 ## 📊 Expected Results
 
-### Model Evoluation - VGG19
+### Proposed Model Evoluation - VGG19
 The VGG19 architecture with transfer learning achieved the best performance in the binary classification of cracks in concrete images.
 
 The results demonstrate the robustness of the model, achieving 99.87\% accuracy on the training set and over 99.2\% on the validation set. When evaluated on the test set, the model maintained its consistency, reaching 99.61\% accuracy with a loss of 0.0221. The classification report highlights near-perfect precision and recall for both classes, confirming the model's ability to reliably distinguish cracks
@@ -61,18 +61,29 @@ The results demonstrate the robustness of the model, achieving 99.87\% accuracy 
 
 ![Img Exemples](images/image-1.png)
 
+#### Others Methods Evoluation
 
-### Proposed Method Evoluation - Grad_CAM
+#### VGG 16 
+Teste accuracy: 99%
 
-In terms of performance, the F1 metric results show that the model performed satisfactorily overall, with a mean of 0.65 and high variability (standard deviation = 0.2363). However, when we focused only on the class containing cracks, the model's performance was significantly better, with a mean of 0.7511, lower dispersion (std = 0.2127), and a median of 0.8198, indicating that most segmentations were successful. On the downside, a few lower outliers were identified, with F1 scores below 0.3, suggesting that in some cases, the segmentation was less precise. These results show that while the model performed well overall, it can struggle with more complex images, highlighting the need for adjustments to improve segmentation in more challenging situations.
+![Confunsion Matrix](images/matrix_vgg16.png)
+
+#### Resnet 50
+Teste accuracy: 94%
+
+![Confunsion Matrix](images/matrix_resnet.png)
+
+### Proposed Method Evoluation - Grad_CAM (Model - VGG19)
 
 #### Proposed Method Overview
 ![Proposed Method Overview](images/image-3.png)
 
+In terms of performance, the F1 metric results show that the model performed satisfactorily overall, with a mean of 0.65 and high variability (standard deviation = 0.2363). However, when we focused only on the class containing cracks, the model's performance was significantly better, with a mean of 0.7511, lower dispersion (std = 0.2127), and a median of 0.8198, indicating that most segmentations were successful. On the downside, a few lower outliers were identified, with F1 scores below 0.3, suggesting that in some cases, the segmentation was less precise. These results show that while the model performed well overall, it can struggle with more complex images, highlighting the need for adjustments to improve segmentation in more challenging situations.
+
 #### Illustration of the process for explaining and segmenting concrete cracks.
 ![process for explaining](images/image-4.png)
 
-### Others Methods Evoluation
+### Others Methods Evoluation (Model - VGG19)
 
 #### Others Methods Overview
 ![Other Methods Overview](<images/Diagrama shap.png>)
