@@ -100,7 +100,7 @@ The LIME method exhibited stable and consistent performance in explaining the mo
 
 ---
 
-### Conclusion
+### 🎯 Conclusion
 **Table: Summary statistics of the results for Grad-CAM, LIME, and SHAP methods**
 
 | Method   | Mean    | Standard Deviation | Median  |
