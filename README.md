@@ -98,6 +98,19 @@ The LIME method exhibited stable and consistent performance in explaining the mo
 #### Exemplo of Lime Output
 ![Lime_result](images/image-6.png)
 
+---
+
+### Conclusion
+**Table: Summary statistics of the results for Grad-CAM, LIME, and SHAP methods**
+
+| Method   | Mean    | Standard Deviation | Median  |
+|----------|---------|--------------------|---------|
+| Grad-CAM | 0.6488  | 0.2362             | 0.8709  |
+| LIME     | 0.1947  | 0.0948             | 0.2289  |
+| SHAP     | 0.2477  | 0.2357             | 0.1909  |
+
+**Source:** Author
+
 
 These findings reinforce that pixel-perturbation-based methods, which treat the model as a black box, tend to produce less reliable and spatially less coherent explanations when compared to gradient-based approaches. In contrast, the proposed method, grounded in Grad-CAM and automatic layer selection, demonstrated substantially superior performance, especially for the crack class (mean F1 = 0.7511), indicating a greater ability to localize and highlight discriminative regions. This result underscores the importance of leveraging the model's internal information to generate more faithful and interpretable visual explanations in CNN-based image classification tasks.
 
