@@ -88,14 +88,18 @@ In terms of performance, the F1 metric results show that the model performed sat
 #### Others Methods Overview
 ![Other Methods Overview](<images/Diagrama shap.png>)
 
-#### Method Evoluation - Shap
 The SHAP-based method, which was also applied to explain the model's decisions, demonstrated significantly lower performance in identifying the relevant crack regions. The mean F1-score was 0.2477 with a high standard deviation of 0.2357. Moreover, the median F1-score was only 0.1909, and 25\% of the samples scored below 0.0396, indicating poor explanatory alignment in a large portion of cases. Although the maximum value reached 0.9417 in some specific examples, the wide variability and low central tendency suggest that SHAP struggles to provide consistent and spatially precise explanations in the context of crack segmentation.
+
+The LIME method exhibited stable and consistent performance in explaining the model's decisions, with a mean F1 score of 0.1947 and a median of 0.2289. Although these results are not outstanding, LIME demonstrated its strength in delivering more balanced explanations, as evidenced by a lower standard deviation of 0.0948, in contrast to SHAP, which showed significant variability in its results.
 
 #### Exemplo of Shap Output
 ![shap_result](images/image-7.png)
 
 #### Exemplo of Lime Output
 ![Lime_result](images/image-6.png)
+
+
+These findings reinforce that pixel-perturbation-based methods, which treat the model as a black box, tend to produce less reliable and spatially less coherent explanations when compared to gradient-based approaches. In contrast, the proposed method, grounded in Grad-CAM and automatic layer selection, demonstrated substantially superior performance, especially for the crack class (mean F1 = 0.7511), indicating a greater ability to localize and highlight discriminative regions. This result underscores the importance of leveraging the model's internal information to generate more faithful and interpretable visual explanations in CNN-based image classification tasks.
 
 ---
 
